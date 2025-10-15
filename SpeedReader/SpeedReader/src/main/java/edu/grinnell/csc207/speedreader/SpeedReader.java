@@ -11,6 +11,7 @@ import java.awt.*;
  * from a text file one at a time on a drawing panel.
  */
 public class SpeedReader {
+
 /**
  * Demonstrating a drawing panel and drawing
  * a "Hello World!" message on it.
@@ -24,6 +25,7 @@ public class SpeedReader {
         g.setFont(f);
         g.drawString("Hello World!", 100, 100);
     }
+
 /**
   * Prints "Hello World!" on the console repeatedly with
   * a 1-second pause between prints.
@@ -37,6 +39,7 @@ public class SpeedReader {
             Thread.sleep(1000);
         }
     }
+
  /**
    * Reads a text file and displays words one at a time on a DrawingPanel 
    * using the specified parameters.
@@ -58,17 +61,13 @@ public class SpeedReader {
         WordGenerator test = new WordGenerator();
         test.wordGenerator(args[0]);
         test.text = text;
-        // while (test.hasNext()) {
-        //  //  System.out.println(test.getWordCount());
-        //    test.next();
-        //    System.out.println(test.getSentenceCount());
-        //    System.out.println(test.getWordCount());
-        // }
+
         int width = Integer.parseInt(args[1]);
         int height = Integer.parseInt(args[2]);
         DrawingPanel panel = new DrawingPanel(width, height);
         Graphics g = panel.getGraphics();
         Font f = new Font("Courier", Font.BOLD, Integer.parseInt(args[3]));
+
         g.setFont(f);
 
         while(test.hasNext()) {
@@ -78,6 +77,7 @@ public class SpeedReader {
             g.fillRect(0, 0, Integer.parseInt(args[1])*2, Integer.parseInt(args[2])*2);
             g.setColor(Color.black);
         }
+
         System.out.println(test.getWordCount());
         System.out.println(test.getSentenceCount());
     }

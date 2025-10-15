@@ -22,6 +22,7 @@ public class WordGenerator {
     public void wordGenerator(String filename) {
         this.filename = filename;
     }
+
 /**
  * Determines whether there are more words available in the text.
  *
@@ -31,6 +32,7 @@ public class WordGenerator {
     public boolean hasNext() throws IOException{
         return (text.hasNext());
     }
+
 /**
  * Returns the next word from the text and updates counters.
  * Increments the word count, and if the word ends with '.', '!', or '?',
@@ -47,6 +49,7 @@ public class WordGenerator {
         }
         return (word);
     } 
+
 /**
  * Returns the total number of words read so far.
  *
@@ -56,6 +59,7 @@ public class WordGenerator {
     public int getWordCount() throws IOException{
          return wordCount;
     }
+    
 /**
  * Returns the total number of sentences read so far.
  * @return the number of sentences read.
