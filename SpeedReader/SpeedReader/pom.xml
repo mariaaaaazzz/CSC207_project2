@@ -9,9 +9,9 @@
 <exec.mainClass>
 edu.grinnell.csc207.speedreader.SpeedReader
 </exec.mainClass>
-<exec.args>src/main/java/edu/grinnell/csc207/speedreader/Source4.txt 500 500 50 500</exec.args>
+
 <!--
- Make sure the release version below is consistent with your version of Java! 
+<exec.args>src/main/java/edu/grinnell/csc207/speedreader/Source4.txt 500 500 50 500</exec.args>
 -->
 <maven.compiler.release>17</maven.compiler.release>
 <maven.compiler.source>17</maven.compiler.source>
